@@ -23,8 +23,15 @@ func InitDB(){
 			t.ColMap(col).MaxSize = size
 		}
 	}
+	t := Dbm.AddTable(models.Article{}).SetKeys(true, "ArticleId")
+	setColumnsizes(t, map[string]int{
+		"ArticleId":	20,
+		"Address":	200,
+		"Title":	200,
+		"Url":		200,
+	})
 
-	t := Dbm.AddTable(models.Project{}).SetKeys(true, "Id")
+	t = Dbm.AddTable(models.Project{}).SetKeys(true, "Id")
 	setColumnsizes(t, map[string]int{
 		"Id":		20,
 		"Title":	50,
@@ -120,8 +127,20 @@ func InitDB(){
 				"lab.jpg"},
 
 	}
+
+	articles := []*models.Article{
+		//ArticleId, Address, Title, Url
+		&models.Article{1, "software-visual-paper", "2016 한국 멀티미디어 학회 추계 학술대회 - 소프트웨어 시각화 방안연구", "https://drive.google.com/file/d/0B3uZrj-xNxjiWlNLSVVWUEJ6VW8/preview"},
+		&models.Article{2, "mean-stack-paper", "MEAN Stack 기반 쇼핑몰 웹앱 및 모바일 앱의 구현", "https://drive.google.com/file/d/0B4IyFNEcErzEY3JVek82eVB3bXM/preview"},
+		&models.Article{3, "erlang-chat-paper", "Erlang  모바일 채팅 서버 구현", "https://drive.google.com/file/d/0B3uZrj-xNxjiZXI3bHYzWW1tWVk/preview"},
+	}
 	for _, project := range projects {
 		if err := Dbm.Insert(project); err != nil{
+			panic(err)
+		}
+	}
+	for _, article := range articles {
+		if err := Dbm.Insert(article); err != nil{
 			panic(err)
 		}
 	}

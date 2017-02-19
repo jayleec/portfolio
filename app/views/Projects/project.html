@@ -34,7 +34,9 @@
         <p>{{.Details}}</p>
     </div>
     <div class="row">
-        <img src="./public/img/{{.Images}}" class="img-thumbnail">
+        {{if .Images}}
+        <img src="./public/img/{{.Images}}" alt="{{.Title}}" onerror="this.src='./public/img/error.jpg'" class="img-thumbnail">
+        {{end}}
     </div>
 
 </div>

@@ -11,14 +11,14 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-4">
             {{template "flash.html" .}}
-            <h2 style="text-align: center; color:#6b6b6b">2016</h2>
-TEST
+            {{range .articles}}
+            <h2>{{.Title}}</h2>
+
+        <iframe src="{{.Url}}" width="640" height="480"></iframe>
+
             </br>
-        </div>
-        <div class="col-md-4"></div>
+
     </div>
     <div class="row">
         </br>
@@ -27,5 +27,5 @@ TEST
         </br>
     </div>
 </div>
-
+            {{end}}
 {{template "footer.html" .}}
