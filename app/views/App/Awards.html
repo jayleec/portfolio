@@ -1,0 +1,36 @@
+{{set . "title" "Jae Kyung"}}
+{{template "header.html" .}}
+{{template "nav.html"}}
+<header class="jumbotron" style="background-image:url(./public/img/awardback.jpg);  background-size: cover;">
+    <div class="container">
+        <div class="row">
+            <h1 style="color: #ffffff; text-align: center; opacity: 0.65;">Awards</h1>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            {{template "flash.html" .}}
+            <h2 style="text-align: center; color:#e2e3df">2016</h2>
+            <ul class="list-group">
+                <li class="lead" style="border: none;">Go 채팅서버</li>
+                <li class="lead" style="border: none;">Go 채팅서버</li>
+                <li class="lead" style="border: none;">Go 채팅서버</li>
+                <li class="lead" style="border: none;">Go 채팅서버</li>
+            </ul>
+            <h2 style="text-align: center; color:#e2e3df">2015</h2>
+            <ul class="list-group">
+                <li class="lead" style="border: none;">Go 채팅서버</li>
+                <li class="lead" style="border: none;">Go 채팅서버</li>
+                <li class="lead" style="border: none;">Go 채팅서버</li>
+                <li class="lead" style="border: none;">Go 채팅서버</li>
+            </ul>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>
+
+{{template "footer.html" .}}
