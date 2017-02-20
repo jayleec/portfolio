@@ -1,0 +1,35 @@
+{{set . "title" "Jae Kyung"}}
+{{template "header.html" .}}
+{{template "nav.html"}}
+<header class="jumbotron" style="background-image:url(./public/img/paperback.jpg);  background-size: cover;">
+    <div class="container">
+        <div class="row">
+            <h1 style="color: #ffffff; text-align: center; opacity: 0.65;">Research Paper</h1>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            {{template "flash.html" .}}
+            <h2 style="text-align: center; color:#6b6b6b">2016</h2>
+            <ul class="list-group">
+                <li class="lead" style="border: none;"><a href="./articles/software-visual-paper"><u>소프트웨어 시각화 방안연구</u></a></li>
+                <li class="lead" style="border: none;"><a href="./articles/mean-stack-paper"><u>MEAN Stack 기반 쇼핑몰 웹앱 및 모바일 앱의 구현</u></a></li>
+                <li class="lead" style="border: none;"><a href="./articles/erlang-chat-paper"><u>Erlang  모바일 채팅 서버 구현</u></a></li>
+            </ul>
+            </br>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+    <div class="row">
+        </br>
+        </br>
+        </br>
+        </br>
+    </div>
+</div>
+
+{{template "footer.html" .}}

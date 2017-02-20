@@ -1,0 +1,31 @@
+{{set . "title" "Jae Kyung"}}
+{{template "header.html" .}}
+{{template "nav.html"}}
+<header class="jumbotron" style="background-image:url(./public/img/paperback.jpg);  background-size: cover;">
+    <div class="container">
+        <div class="row">
+            <h1 style="color: #ffffff; text-align: center; opacity: 0.65;">Research Paper</h1>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row">
+            {{template "flash.html" .}}
+            {{range .articles}}
+            <h2>{{.Title}}</h2>
+
+        <iframe src="{{.Url}}" width="640" height="480"></iframe>
+
+            </br>
+
+    </div>
+    <div class="row">
+        </br>
+        </br>
+        </br>
+        </br>
+    </div>
+</div>
+            {{end}}
+{{template "footer.html" .}}

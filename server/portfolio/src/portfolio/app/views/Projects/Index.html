@@ -1,0 +1,47 @@
+{{set . "title" "Jae Kyung"}}
+{{template "header.html" .}}
+{{template "nav.html"}}
+<header class="jumbotron" style="background-image:url(./public/img/back.jpg);  background-size: cover;">
+    <div class="container">
+        <div class="row">
+            <h1 style="color: #ffffff; text-align: center; opacity: 0.65;" >Web & Mobile</h1>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            {{template "flash.html" .}}
+            <h2 style="text-align: center; color:#6b6b6b">2017</h2>
+            <ul class="list-group">
+                <li class="lead" style="border: none;"><a href="./projects/golang-chat-server"><u>Go 채팅서버</u></a></li>
+                <li class="lead" style="border: none;"><a href="./projects/erlang-chat-server"><u>Erlang 채팅서버</u></a></li>
+                <li class="lead" style="border: none;"><a href="./projects/mobile-chat-client"><u>모바일 채팅 클라이언트</u></a></li>
+            </ul>
+            </br>
+            <h2 style="text-align: center; color:#6b6b6b">2016</h2>
+            <ul class="list-group">
+                <li class="lead" style="border: none;"><a href="./projects/software-visualization"><u>소프트웨어 품질 지표 시각화</u></a>&nbsp;&nbsp;<img src="./public/img/silvermedal.jpg" width="30px"></li>
+                <li class="lead" style="border: none;"><a href="./projects/java-galaga-game"><u>자바 갈라가 게임</u></a></li>
+                <li class="lead" style="border: none;"><a href="./projects/reverse-camera"><u>iOS Reverse Camera App</u></a>&nbsp;&nbsp;<img src="./public/img/goldmedal.jpg" width="30px"></li>
+                <li class="lead" style="border: none;"><a href="./projects/mean-stack-web-app"><u>MEAN Stack 기반 쇼핑몰 앱</u></a></li>
+            </ul>
+            </br>
+            <h2 style="text-align: center; color:#6b6b6b">2015 이전 UX/UI</h2>
+            <ul class="list-group">
+                <li class="lead" style="border: none;"><a href="http://jaekyung.dunked.com/"><u>http://jaekyung.dunked.com/</u></a></li>
+            </ul>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+    <div class="row">
+        </br>
+        </br>
+        </br>
+        </br>
+    </div>
+</div>
+
+{{template "footer.html" .}}

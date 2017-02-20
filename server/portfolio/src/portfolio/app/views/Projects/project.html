@@ -1,0 +1,44 @@
+{{set . "title" "Jae Kyung"}}
+{{template "header.html" .}}
+{{template "nav.html"}}
+{{range .projects}}
+<header class="jumbotron" style="background-image:url(./public/img/{{.Back}});  background-size: cover;">
+    <div class="container">
+        <div class="row">
+            <h1 style="color: #ffffff; text-align: center; opacity: 0.65;" >{{.Title}}</h1>
+        </div>
+    </div>
+</header>
+{{end}}
+<div class="container">
+    <div class="row">
+        <div>
+            {{template "flash.html" .}}
+            {{range .projects}}
+            <h2>{{.Title}}</h2>
+            {{if .Video}}
+            <iframe width="560" height="315" src="{{.Video}}" frameborder="0" allowfullscreen></iframe>
+            {{end}}
+            {{if .Deploy}}
+            <p>Web 주소 :&nbsp; &nbsp;
+            <a href="{{.Deploy}}">{{.Deploy}}</a></p>
+            {{end}}
+            <p>Git 주소 &nbsp;&nbsp;:&nbsp; &nbsp;
+            <a href="{{.Git}}">{{.Git}}</a></p>
+        </div>
+    </div>
+    <div class="row">
+        <p>사용언어&nbsp;&nbsp; :&nbsp; &nbsp;{{.Language}}</p>
+    </div>
+    <div class="row">
+        <p>{{.Details}}</p>
+    </div>
+    <div class="row">
+        {{if .Images}}
+        <img src="./public/img/{{.Images}}" alt="{{.Title}}" onerror="this.src='./public/img/error.jpg'" class="img-thumbnail">
+        {{end}}
+    </div>
+
+</div>
+{{end}}
+{{template "footer.html" .}}
